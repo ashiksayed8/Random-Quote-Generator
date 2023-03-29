@@ -8,6 +8,7 @@ async function getQuote(){
         btnEl.innerText = "Loading------"
         btnEl.disabled = true;
         quoteEl.innerText = `Update-----------`;
+        authorEl.innerText = `Author Update----`;
         const result = await fetch("https://api.quotable.io/random")
                     .then(data => data.json());
         quoteEl.innerText =  result.content;
@@ -21,4 +22,4 @@ async function getQuote(){
 }
 
 
-btnEl.addEventListener("click", getQuote);
+btnEl.addEventListener("click", getQuote());
